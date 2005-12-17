@@ -1,0 +1,30 @@
+--- fox-1.0.30/configure.in.orig	Sat Jan 11 06:01:11 2003
++++ fox-1.0.30/configure.in	Tue Jan 28 19:29:29 2003
+@@ -49,9 +49,6 @@
+ AC_SUBST(LT_REVISION)
+ AC_SUBST(LT_AGE)
+ 
+-dnl Prevents setting flags.
+-CXXFLAGS=""
+-
+ dnl Checks for programs.
+ AC_PROG_MAKE_SET
+ AC_PROG_CC
+@@ -240,7 +237,7 @@
+ AC_ARG_ENABLE(debug,[  --enable-debug          compile for debugging])
+ AC_MSG_RESULT([$enable_debug])
+ if test "x$enable_debug" = "xyes" ; then
+-CXXFLAGS="${CXXFLAGS} -g -DDEBUG"
++CXXFLAGS="${CXXFLAGS} -DDEBUG"
+ fi
+ 
+ dnl Building for release
+@@ -248,7 +245,7 @@
+ AC_ARG_ENABLE(release,[  --enable-release        compile for release])
+ AC_MSG_RESULT([$enable_release])
+ if test "x$enable_release" = "xyes" ; then
+-CXXFLAGS="${CXXFLAGS} -O2 -DNDEBUG"
++CXXFLAGS="${CXXFLAGS} -DNDEBUG"
+ if test "${GXX}" = "yes" ; then
+ CXXFLAGS="${CXXFLAGS} -Wuninitialized -ffast-math -finline-functions -fomit-frame-pointer -fexpensive-optimizations"
+ fi

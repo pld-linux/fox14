@@ -1,0 +1,24 @@
+diff -Nru fox-1.4.5.orig/Makefile.am fox-1.4.5/Makefile.am
+--- fox-1.4.5.orig/Makefile.am	2005-02-16 13:32:39.178606728 +0000
++++ fox-1.4.5/Makefile.am	2005-02-16 13:32:53.081493168 +0000
+@@ -4,7 +4,7 @@
+ AUTOMAKE_OPTIONS = foreign dist-zip
+ #AUTOMAKE_OPTIONS = foreign dist-zip no-dependencies
+ 
+-SUBDIRS    = utils include src chart doc tests shutterbug adie pathfinder calculator windows
++SUBDIRS    = utils include src chart tests shutterbug adie pathfinder calculator windows
+ EXTRA_DIST = ADDITIONS AUTHORS INSTALL LICENSE LICENSE_ADDENDUM TRACING README fox.lsm index.html aclocal.m4
+ 
+ bin_SCRIPTS = fox-config
+diff -Nru fox-1.4.5.orig/Makefile.in fox-1.4.5/Makefile.in
+--- fox-1.4.5.orig/Makefile.in	2005-02-16 13:32:39.178606728 +0000
++++ fox-1.4.5/Makefile.in	2005-02-16 13:32:49.459043864 +0000
+@@ -102,7 +102,7 @@
+ AUTOMAKE_OPTIONS = foreign dist-zip
+ #AUTOMAKE_OPTIONS = foreign dist-zip no-dependencies
+ 
+-SUBDIRS = utils include src chart doc tests shutterbug adie pathfinder calculator windows
++SUBDIRS = utils include src chart tests shutterbug adie pathfinder calculator windows
+ EXTRA_DIST = ADDITIONS AUTHORS INSTALL LICENSE LICENSE_ADDENDUM TRACING README fox.lsm index.html aclocal.m4
+ 
+ bin_SCRIPTS = fox-config
