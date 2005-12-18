@@ -1,6 +1,4 @@
 #
-# NOTE: don't add --with-xft to configure - you will get fonts beautiful like a crap
-#
 %bcond_without	static_libs # don't build static libraries
 #
 %define	_oname	fox
@@ -131,6 +129,7 @@ LDFLAGS="%{rpmldflags} -L/usr/X11R6/%{_lib}"
 	--with-opengl \
 	--with-shape \
 	--with-xshm \
+	--with-xft \
 	%{?debug:--enable-debug}%{!?_debug:--enable-release} \
 	--enable-static=%{?with_static_libs:yes}%{!?with_static_libs:no}
 %{__make}
